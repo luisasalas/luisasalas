@@ -6,9 +6,9 @@ stages:
     - build
     - deploy
 
-deploy:
+build:
   image: circleci/node:8.11.2
-  stage: deploy
+  stage: build
   script:
     - npm install # Install all dependencies
     - npm run build --prod # Build for prod
