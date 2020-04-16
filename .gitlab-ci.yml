@@ -14,7 +14,10 @@ cache:
 before_script:
     - npm install # Install all dependencies
 
-pages:
+stages:
+    - deploy
+    
+deploy:
   stage: deploy
   script:
     - npm run build --prod # Build for prod
