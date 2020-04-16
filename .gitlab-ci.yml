@@ -1,0 +1,23 @@
+# Using the node alpine image to build the React app
+image: node:10.16.3
+
+# Announce the URL as per CRA docs
+# https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#advanced-configuration
+# Cache node modules - speeds up future builds
+variables:
+    PUBLIC_URL: "/qa-dashboard" # slash is important
+
+cache:
+  paths:
+    - node_modules/
+    
+before_script:
+    - npm install # Install all dependencies
+
+pages:
+  stage: deploy
+  script:
+    - npm run build --prod # Build for prod
+    - npx s3-deploy -source=build/ -region=us-east-1 -key=$PROD_AWS_ACCESS_KEY_ID -secret=$PROD_AWS_SECRET_ACCESS_KEY -distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID -bucket=$BUCKET_NAME
+  only:
+    - master # run on master branch
