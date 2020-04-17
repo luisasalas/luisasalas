@@ -1,28 +1,23 @@
-cache:
-  paths:
-    - node_modules/
-    
+image: nikolaik/python-nodejs:latest
+
 stages:
-    - build
-    - deploy
+  - deploy
 
-build:
-  image: node:10.16.3
-  stage: build
-  script:
-    - npm install # Install all dependencies
-    - npm run build --prod # Build for prod
-  only:
-    - master # run on master branch
-  artifacts:
-    paths:
-    - build/
-
-deploy:
-  image: circleci/golang:1.9.6
+deploy production:
   stage: deploy
   script:
-    - go get -v github.com/bep/s3deploy
-    - /go/pkg/s3-deploy -source=build/ -region=us-east-1 -key=$PROD_AWS_ACCESS_KEY_ID -secret=$PROD_AWS_SECRET_ACCESS_KEY -distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID -bucket=$BUCKET_NAME
+  - yarn
+  - yarn test
+  - yarn build
+  - pip install awscli
+  - aws s3 cp ./build/ s3://$BUCKET_NAME/ --recursive --include "*"
+  - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+  - echo "Deploy to $BUCKET_NAME"
+  artifacts:
+      paths:
+      - build
+  environment:
+      name: production
+      url: https://luisasalas.com
   only:
-    - master # run on master branch
+  - master
