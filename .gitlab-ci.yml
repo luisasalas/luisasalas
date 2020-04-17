@@ -7,7 +7,6 @@ deploy production:
   stage: deploy
   script:
   - yarn
-  - yarn test
   - yarn build
   - pip install awscli
   - aws s3 cp ./build/ s3://$BUCKET_NAME/ --recursive --include "*"
