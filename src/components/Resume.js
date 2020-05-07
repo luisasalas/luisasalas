@@ -122,60 +122,6 @@ const Resume = () => {
                 <Typography
                     variant='h2'
                     className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
-                    2013
-                </Typography>
-                <Box
-                    component='div'
-                    className={classes.timeLineItem}>
-                    <Typography
-                        variant='h5'
-                        aligh='center'
-                        className={classes.subHeading}>
-                        web design
-                    </Typography>
-                    <Typography
-                        variant='body1'
-                        aligh='center'
-                        style={{ color: 'tomato' }}>
-                        Compnay name where worked
-                    </Typography>
-                    <Typography
-                        variant='subtitle1'
-                        aligh='center'
-                        style={{ color: 'tan' }}>
-                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    </Typography>
-                </Box>
-                <Typography
-                    variant='h2'
-                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
-                    2014
-                </Typography>
-                <Box
-                    component='div'
-                    className={classes.timeLineItem}>
-                    <Typography
-                        variant='h5'
-                        aligh='center'
-                        className={classes.subHeading}>
-                        Html Css
-                    </Typography>
-                    <Typography
-                        variant='body1'
-                        aligh='center'
-                        style={{ color: 'tomato' }}>
-                        Compnay name where worked
-                    </Typography>
-                    <Typography
-                        variant='subtitle1'
-                        aligh='center'
-                        style={{ color: 'tan' }}>
-                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    </Typography>
-                </Box>
-                <Typography
-                    variant='h2'
-                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
                     2015
                 </Typography>
                 <Box
@@ -185,19 +131,52 @@ const Resume = () => {
                         variant='h5'
                         aligh='center'
                         className={classes.subHeading}>
-                        C#
+                        Software Developer
                     </Typography>
                     <Typography
                         variant='body1'
                         aligh='center'
                         style={{ color: 'tomato' }}>
-                        Compnay name where worked
+                        Open Sky Software
                     </Typography>
                     <Typography
                         variant='subtitle1'
                         aligh='center'
                         style={{ color: 'tan' }}>
-                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                        Java EE developer. Develop and implement the MVC architectural pattern.
+                        Create and deploy web pages using HTML, JSP, Thyme leaf, JavaScript, jQuery and CSS.
+                        Develop Web services (REST) to interact with other components.
+                        Integrated Spring DAO for data access use with Hibernate.
+                        Use ANT and Gradle automated build scripts to compile and package the application.
+                    </Typography>
+                </Box>
+                <Typography
+                    variant='h2'
+                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
+                    2016
+                </Typography>
+                <Box
+                    component='div'
+                    className={classes.timeLineItem}>
+                    <Typography
+                        variant='h5'
+                        aligh='center'
+                        className={classes.subHeading}>
+                        Software Developer
+                    </Typography>
+                    <Typography
+                        variant='body1'
+                        aligh='center'
+                        style={{ color: 'tomato' }}>
+                        CoStar Group
+                    </Typography>
+                    <Typography
+                        variant='subtitle1'
+                        aligh='center'
+                        style={{ color: 'tan' }}>
+                        As a software developer at Costar, I maintained and developed the software that powers the BizQuest.com and BizBuySell.com sites.
+                        I worked with stakeholders and designers to create an experience that will empower visitors to find businesses that they could become successful in.
+                        The technologies I use included C#, ASP.NET MVC, Web Forms, SQL Server, Visual Studio, Razor Templating Engine, jQuery, JavaScript, HTML, CSS and Ajax, and Bootstrap.
                     </Typography>
                 </Box>
                 <Typography
@@ -212,19 +191,50 @@ const Resume = () => {
                         variant='h5'
                         aligh='center'
                         className={classes.subHeading}>
-                        React js
+                        Delphi Application Developer
                     </Typography>
                     <Typography
                         variant='body1'
                         aligh='center'
                         style={{ color: 'tomato' }}>
-                        Compnay name where worked
+                        American Recovery Service
                     </Typography>
                     <Typography
                         variant='subtitle1'
                         aligh='center'
                         style={{ color: 'tan' }}>
-                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                        As a contractor Delphi developer, I worked on a legacy application that supports the operations of the largest asset recovery service company in the nation.
+                        I supported and maintain a complicated legacy codebase and implemented new features, working closely with project managers, clients and various stakeholders in a very flexible software development process having to be able to respond quickly to client needs and user issues.
+                    </Typography>
+                </Box>
+                <Typography
+                    variant='h2'
+                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
+                    2018
+                </Typography>
+                <Box
+                    component='div'
+                    className={classes.timeLineItem}>
+                    <Typography
+                        variant='h5'
+                        aligh='center'
+                        className={classes.subHeading}>
+                        Software Engineer
+                    </Typography>
+                    <Typography
+                        variant='body1'
+                        aligh='center'
+                        style={{ color: 'tomato' }}>
+                        SkySlope
+                    </Typography>
+                    <Typography
+                        variant='subtitle1'
+                        aligh='center'
+                        style={{ color: 'tan' }}>
+                        Working on building a digital signing platform using Microservices, Event Driven Architecture, NoSql, AWS, React, C# and Node.js.
+                        Design and develop key complex features and functionality. Took ownership of integrating authentication and authorization in our APIs using AWS Cognito.
+                        Work on AWS lambdas for consuming events from AWS Kinesis to sync data between microservices.
+                        Work with product managers and consultants to gather requirements and implement key features.
                     </Typography>
                 </Box>
             </Box>
