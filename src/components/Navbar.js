@@ -6,6 +6,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import avatar from '../avatar.png';
+import Footer from './Footer';
 
 //CSS STYLES
 const useStyles = makeStyles(theme => ({
@@ -39,11 +40,13 @@ const menuItems = [
     },
     {
         lilstIcon: <Apps />,
-        listText: 'Portfolio'
+        listText: 'Portfolio',
+        listPath: '/portfolio'
     },
     {
         lilstIcon: <ContactMail />,
-        listText: 'Contacts'
+        listText: 'Contacts',
+        listPath: '/contacts'
     }
 ]
 
@@ -93,6 +96,7 @@ const Navbar = () => {
                             onClose={toggleSlider('left', false)}
                         >
                             {sideList('left')}
+                            <Footer />
                         </MobilRightMenuSlider>
                     </Toolbar>
                 </AppBar>
