@@ -11,6 +11,7 @@ deploy production:
   stage: deploy
   script:
   - yarn
+  - export NODE_OPTIONS=--openssl-legacy-provider
   - yarn build
   - pip install awscli
   - aws s3 cp ./build/ s3://$BUCKET_NAME/ --recursive --include "*"
