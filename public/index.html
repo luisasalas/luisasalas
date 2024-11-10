@@ -6,6 +6,19 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luis Salas</title>
+  <script type="text/javascript">
+    (function(w, d, x, id){
+      s=d.createElement('script');
+      s.src='https://db08fjupg2abb.cloudfront.net/amazon-connect-chat-interface-client.js';
+      s.async=1;
+      s.id=id;
+      d.getElementsByTagName('head')[0].appendChild(s);
+      w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+    })(window, document, 'amazon_connect', '9ea36692-d383-40a1-a7ae-d57d33c0762e');
+    amazon_connect('styles', { iconType: 'CHAT', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+    amazon_connect('snippetId', 'QVFJREFIZ2ZYaENvQWJCb1ZtYmxRNlFMNVJYMlhab3BKY1p0RnRGQ2pJNGhxdnBvemdGTVJweTlBYnZJSHMwcDg1QTRPUk5nQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNblNlSkpqZlRUa1crVVBidkFnRVFnQ3NadWw1NGlPREx0ZVdWd29FeiswM2JmVUxMU25OTWNhZW1NWVlNd2g0dmxRMlhqSXo4NkVjcklOUGk6OlhtZmhWeU91U05FUmlDeGlYcEF4TUZRci9FaXNiSnNtUFNGYTM2VEhZWnFrS3ZNM1BoQ2dEYmVjM3BiRGFJdVo3TWVzVWk2blhUZzc4dzRhRXlyV3gyZDdRc1JGR21mRmFDdHA5cW5TNExwVWpqdjNnOERCQUw5bjRaQXo4V1U4Q3Zqb0htMUowb1ZUdVFGTUs0MFV5SUN3UzZRRDY5bz0=');
+    amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
+  </script>
 </head>
 
 <body>
