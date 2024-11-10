@@ -31,12 +31,14 @@ function Footer() {
                 style={{ padding: 0 }}
                 icon={<LinkedInIcon />}
                 href='https://www.linkedin.com/in/luis-salascorona/'
+                target='_blank'
             />
             <BottomNavigationAction
                 className={classes.root}
                 style={{ padding: 0 }}
                 icon={<GitHubIcon />}
                 href='https://github.com/luisasalas'
+                target='_blank'
             />
         </BottomNavigation>
     )
