@@ -1,6 +1,5 @@
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import GitlabIcon from '../images/gitlab-logo-500.svg';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
