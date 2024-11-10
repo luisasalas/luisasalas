@@ -39,13 +39,6 @@ function Footer() {
                 icon={<GitHubIcon />}
                 href='https://github.com/luisasalas'
             />
-            <BottomNavigationAction
-                style={{ padding: 0 }}
-                className={classes.root}
-                icon={<GitlabIcon />}
-                href='https://gitlab.com/luiscorona193'
-                
-            />
         </BottomNavigation>
     )
 }
