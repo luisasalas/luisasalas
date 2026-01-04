@@ -114,7 +114,7 @@ const Resume = () => {
                 variant='h4'
                 align='center'
                 className={classes.heading}>
-                working experince
+                working experience
             </Typography>
             <Box
                 component='div'
@@ -143,11 +143,9 @@ const Resume = () => {
                         variant='subtitle1'
                         aligh='center'
                         style={{ color: 'tan' }}>
-                        Java EE developer. Develop and implement the MVC architectural pattern.
-                        Create and deploy web pages using HTML, JSP, Thyme leaf, JavaScript, jQuery and CSS.
+                        Java EE full stack software engineer. Develop and implement the MVC architectural pattern.
                         Develop Web services (REST) to interact with other components.
                         Integrated Spring DAO for data access use with Hibernate.
-                        Use ANT and Gradle automated build scripts to compile and package the application.
                     </Typography>
                 </Box>
                 <Typography
@@ -174,9 +172,9 @@ const Resume = () => {
                         variant='subtitle1'
                         aligh='center'
                         style={{ color: 'tan' }}>
-                        As a software developer at Costar, I maintained and developed the software that powers the BizQuest.com and BizBuySell.com sites.
-                        I worked with stakeholders and designers to create an experience that will empower visitors to find businesses that they could become successful in.
-                        The technologies I use included C#, ASP.NET MVC, Web Forms, SQL Server, Visual Studio, Razor Templating Engine, jQuery, JavaScript, HTML, CSS and Ajax, and Bootstrap.
+                        As a software engineer at Costar, I maintained and developed the software that powers the BizQuest.com and BizBuySell.com sites.
+                        I worked with stakeholders and designers to create an experience that would empower visitors to find businesses that they could become successful in.
+                        The technologies used included C#, ASP.NET MVC, Web Forms, SQL Server, Visual Studio, Razor Templating Engine, jQuery, JavaScript, HTML, CSS and Ajax, and Bootstrap.
                     </Typography>
                 </Box>
                 <Typography
@@ -191,7 +189,7 @@ const Resume = () => {
                         variant='h5'
                         aligh='center'
                         className={classes.subHeading}>
-                        Delphi Application Developer
+                        Software Engineer
                     </Typography>
                     <Typography
                         variant='body1'
@@ -203,8 +201,8 @@ const Resume = () => {
                         variant='subtitle1'
                         aligh='center'
                         style={{ color: 'tan' }}>
-                        As a contractor Delphi developer, I worked on a legacy application that supports the operations of the largest asset recovery service company in the nation.
-                        I supported and maintain a complicated legacy codebase and implemented new features, working closely with project managers, clients and various stakeholders in a very flexible software development process having to be able to respond quickly to client needs and user issues.
+                        As a contractor Delphi software engineer, I worked on a legacy application that supports the operations of the nation's largest asset recovery service company.
+                        I supported and maintained a complicated legacy codebase and implemented new features, working closely with project managers, clients, and various stakeholders in a very flexible software development process having to be able to respond quickly to client needs and user issues.
                     </Typography>
                 </Box>
                 <Typography
@@ -231,10 +229,64 @@ const Resume = () => {
                         variant='subtitle1'
                         aligh='center'
                         style={{ color: 'tan' }}>
-                        Working on building a digital signing platform using Microservices, Event Driven Architecture, NoSql, AWS, React, C# and Node.js.
+                        Contributed to building a digital signing platform using microservices, event-driven architecture, NoSql, AWS, React, C# and Node.js.
                         Design and develop key complex features and functionality. Took ownership of integrating authentication and authorization in our APIs using AWS Cognito.
-                        Work on AWS lambdas for consuming events from AWS Kinesis to sync data between microservices.
-                        Work with product managers and consultants to gather requirements and implement key features.
+                        Worked on AWS lambdas for consuming events from AWS Kinesis to sync data between microservices.
+                        I worked with product managers and consultants to gather requirements and implement features.
+                    </Typography>
+                </Box>
+                <Typography
+                    variant='h2'
+                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
+                    2019
+                </Typography>
+                <Box
+                    component='div'
+                    className={classes.timeLineItem}>
+                    <Typography
+                        variant='h5'
+                        aligh='center'
+                        className={classes.subHeading}>
+                        Senior Software Development Engineer In Test
+                    </Typography>
+                    <Typography
+                        variant='body1'
+                        aligh='center'
+                        style={{ color: 'tomato' }}>
+                        One Finance
+                    </Typography>
+                    <Typography
+                        variant='subtitle1'
+                        aligh='center'
+                        style={{ color: 'tan' }}>
+                        As a Senior SDET, I helped set up and maintain current test automation frameworks on multiple application platforms, such as mobile(IOS & Android), backend, and web. Created a QA dashboard using React and Gitlab's API to display the results of client tests which helped accelerate the time to identify bugs. Collaborated with Development and QA engineers to accelerate progress on our test automation goals. Created an API with AWS lambda and API Gateway to reduce time spent on repetitive testing tasks such as creating test users. Writing, scheduling, and publishing test automation scripts for full-stack infrastructure. Constantly improve our testing infrastructure to streamline the process of identifying root causes of test failures. Maintain and deploy QA infrastructure using cloud formation scripts.
+                    </Typography>
+                </Box>
+                <Typography
+                    variant='h2'
+                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
+                    2022
+                </Typography>
+                <Box
+                    component='div'
+                    className={classes.timeLineItem}>
+                    <Typography
+                        variant='h5'
+                        aligh='center'
+                        className={classes.subHeading}>
+                        Senior Software Engineer
+                    </Typography>
+                    <Typography
+                        variant='body1'
+                        aligh='center'
+                        style={{ color: 'tomato' }}>
+                        One Finance
+                    </Typography>
+                    <Typography
+                        variant='subtitle1'
+                        aligh='center'
+                        style={{ color: 'tan' }}>
+                        I developed features for a customer-facing AI chatbot leveraging AWS Connect, Amazon Lex, RAG, and OpenAI to reduce live agent contacts and lower support costs. I designed and implemented integrations with Klarna, enabling seamless in-app transitions between bots and live agents, and built scalable infrastructure using AWS API Gateway WebSocket APIs, Lambdas, and microservices to support real-time interactions. In addition, I partnered with stakeholders and product managers to define requirements and collaborated across teams to deliver impactful, high-value features.
                     </Typography>
                 </Box>
             </Box>
