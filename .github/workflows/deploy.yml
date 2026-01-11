@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      NODE_OPTIONS: --openssl-legacy-provider
       BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
       AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
 
