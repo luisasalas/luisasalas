@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Luis Salas – Portfolio
 
-## Available Scripts
+A responsive, single‑page portfolio built with React + TypeScript and Material‑UI. It showcases my experience across full‑stack development, cloud integrations, and test automation with sections for landing, resume, projects (coming soon), and contact.
 
-In the project directory, you can run:
+## Tech Stack
+- React 16 + TypeScript, React Router 5
+- Material‑UI (v4) for layout, theming, and components
+- Particles/typed text hero for a modern landing experience
+- Deployed to AWS S3 + CloudFront (GitHub Actions workflow included)
 
-### `yarn start`
+## Local Development
+```bash
+yarn install          # installs deps (TypeScript + @types included)
+yarn start            # http://localhost:3000
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Testing
+```bash
+yarn test
+```
+Uses React Testing Library with a simple sanity check; extend with component/regression tests as needed.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Production Build
+```bash
+yarn build
+```
+Outputs an optimized bundle in `build/`, suitable for static hosting (S3/CloudFront or any CDN).
 
-### `yarn test`
+## Deploy (GitHub Actions → AWS)
+- Workflow file: `.github/workflows/deploy.yml`
+- Required secrets: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `BUCKET_NAME`, `AWS_CLOUDFRONT_DISTRIBUTION_ID`
+- On push to `master`, the site builds and syncs to S3, then invalidates CloudFront.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Structure
+- `src/components/` — Navbar, Header (hero), Footer, Contacts, Resume timeline, Portfolio placeholder
+- `src/App.tsx` — routes for `/`, `/resume`, `/portfolio`, `/contacts`
+- `src/types/` — local shims for third‑party libraries without published types
 
-### `yarn build`
+## Highlights for Employers
+- Proven cloud deployment flow (S3 + CloudFront, AWS CLI, GitHub Actions)
+- Strong UI polish with Material‑UI theming, particles background, and typed hero copy
+- Experience spans full‑stack development, AWS integrations, and test automation (see Resume section in app)
+- TypeScript‑first codebase with typed third‑party integrations and Jest/RTL scaffolding
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Future Enhancements
+- Fill `Portfolio` with shipped projects, linking to live demos and code
+- Add contact form backend (API + validation) and monitoring
+- Expand test coverage (visual regression, accessibility checks)
