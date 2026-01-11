@@ -11,6 +11,7 @@ jobs:
     env:
       BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
       AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+      AWS_REGION: ${{ secrets.AWS_REGION }}
 
     steps:
       - uses: actions/checkout@v4
@@ -31,7 +32,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ env.AWS_REGION }}
 
       - name: Upload to S3
         run: aws s3 sync ./build s3://${{ env.BUCKET_NAME }}/ --delete
