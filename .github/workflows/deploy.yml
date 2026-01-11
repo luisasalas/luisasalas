@@ -7,9 +7,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: https://luisasalas.com
+    environment: production
     env:
       NODE_OPTIONS: --openssl-legacy-provider
       BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
