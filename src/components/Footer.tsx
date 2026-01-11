@@ -22,23 +22,27 @@ const useStyles = makeStyles({
     }
 })
 
-function Footer() {
+const Footer: React.FC = () => {
     const classes = useStyles()
     return (
-        <BottomNavigation width='auto' style={{ background: '#222' }}>
+        <BottomNavigation style={{ background: '#222', width: 'auto' }}>
             <BottomNavigationAction
                 className={classes.root}
                 style={{ padding: 0 }}
                 icon={<LinkedInIcon />}
+                component='a'
                 href='https://www.linkedin.com/in/luis-salascorona/'
                 target='_blank'
+                rel='noreferrer'
             />
             <BottomNavigationAction
                 className={classes.root}
                 style={{ padding: 0 }}
                 icon={<GitHubIcon />}
+                component='a'
                 href='https://github.com/luisasalas'
                 target='_blank'
+                rel='noreferrer'
             />
         </BottomNavigation>
     )

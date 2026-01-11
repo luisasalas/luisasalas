@@ -7,7 +7,7 @@ import Contacts from './components/Contacts';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <CssBaseline />

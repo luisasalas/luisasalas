@@ -25,7 +25,7 @@ const userStyles = makeStyles({
         padding: '3rem 0'
     }
 })
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
     const classes = userStyles()
     return (
         <Box component='div' className={classes.mainContainer}>

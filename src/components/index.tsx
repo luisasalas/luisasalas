@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     }
 })
 
-const Home = () => {
+const Home: React.FC = () => {
     const classes = useStyles()
 
     return (
@@ -38,7 +38,7 @@ const Home = () => {
                         },
                         size: {
                             value: 8,
-                            reandom: true,
+                            random: true,
                             anim: {
                                 enable: true,
                                 speed: 6,

@@ -1,5 +1,5 @@
 import { AppBar, Avatar, Box, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography } from '@material-ui/core';
-import MobilRightMenuSlider from '@material-ui/core/Drawer';
+import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 import { Apps, AssignmentInd, ContactMail, Home } from '@material-ui/icons';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -27,38 +27,46 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const menuItems = [
+type DrawerAnchor = 'left';
+
+type MenuItem = {
+    listIcon: React.ReactElement;
+    listText: string;
+    listPath: string;
+}
+
+const menuItems: MenuItem[] = [
     {
-        lilstIcon: <Home />,
+        listIcon: <Home />,
         listText: 'Home',
         listPath: '/'
     },
     {
-        lilstIcon: <AssignmentInd />,
+        listIcon: <AssignmentInd />,
         listText: 'Resume',
         listPath: '/resume'
     },
     {
-        lilstIcon: <Apps />,
+        listIcon: <Apps />,
         listText: 'Portfolio',
         listPath: '/portfolio'
     },
     {
-        lilstIcon: <ContactMail />,
+        listIcon: <ContactMail />,
         listText: 'Contacts',
         listPath: '/contacts'
     }
 ]
 
-const Navbar = () => {
-    const [state, setState] = useState({
+const Navbar: React.FC = () => {
+    const [state, setState] = useState<Record<DrawerAnchor, boolean>>({
         left: false
     })
-    const toggleSlider = (slider, open) => () => {
+    const toggleSlider = (slider: DrawerAnchor, open: boolean) => () => {
         setState({ ...state, [slider]: open })
     }
     const classes = useStyles()
-    const sideList = slider => (
+    const sideList = (slider: DrawerAnchor) => (
         <Box
             className={classes.menuSliderContainer}
             component="div"
@@ -67,12 +75,12 @@ const Navbar = () => {
             <Avatar className={classes.avatar} src={avatar} alt="Luis Salas" />
             <Divider />
             <List>
-                {menuItems.map((lsItem, key) => (
-                    <ListItem button key={key} component={Link} to={lsItem.listPath}>
+                {menuItems.map(({ listIcon, listPath, listText }) => (
+                    <ListItem button key={listText} component={Link as React.ElementType} to={listPath}>
                         <ListItemIcon className={classes.listItem}>
-                            {lsItem.lilstIcon}
+                            {listIcon}
                         </ListItemIcon>
-                        <ListItemText className={classes.listItem} primary={lsItem.listText} />
+                        <ListItemText className={classes.listItem} primary={listText} />
                     </ListItem>
                 ))}
             </List>
@@ -90,14 +98,14 @@ const Navbar = () => {
                         <Typography variant="h5" style={{ color: "tan" }}>
                             Portfolio
                     </Typography>
-                        <MobilRightMenuSlider
+                        <Drawer
                             anchor="left"
                             open={state.left}
                             onClose={toggleSlider('left', false)}
                         >
                             {sideList('left')}
                             <Footer />
-                        </MobilRightMenuSlider>
+                        </Drawer>
                     </Toolbar>
                 </AppBar>
             </Box>

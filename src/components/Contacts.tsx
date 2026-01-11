@@ -40,14 +40,14 @@ const InputField = withStyles({
     }
 })(TextField)
 
-const Contacts = () => {
+const Contacts: React.FC = () => {
     const classes = useStyles()
     return (
         <Box component='div' style={{ background: '#233', height: '100vh' }}>
             <Navbar />
             <Grid container justify='center'>
                 <Box component='form' className={classes.form}>
-                    <Typography variant='h5' style={{ color: 'tomato', textAlign: 'cemter', textTransform: 'uppercase' }}>
+                    <Typography variant='h5' style={{ color: 'tomato', textAlign: 'center', textTransform: 'uppercase' }}>
                         hire or contact me...
                     </Typography>
                     <InputField
