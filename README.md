@@ -13,6 +13,7 @@ A responsive, single‑page portfolio built with React + TypeScript and Material
 yarn install          # installs deps (TypeScript + @types included)
 yarn start            # http://localhost:3000
 ```
+Recommended Node: 18+ (matches CI).
 
 ## Testing
 ```bash
