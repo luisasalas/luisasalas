@@ -13,12 +13,21 @@ A responsive, single‑page portfolio built with React + TypeScript and Material
 yarn install          # installs deps (TypeScript + @types included)
 yarn start            # http://localhost:3000
 ```
+Recommended Node: 18+ (matches CI).
 
 ## Testing
 ```bash
 yarn test
 ```
 Uses React Testing Library with a simple sanity check; extend with component/regression tests as needed.
+
+### End-to-End (Playwright)
+```bash
+yarn playwright:install   # one-time browser install
+yarn test:e2e             # runs Playwright specs (starts dev server automatically)
+yarn test:e2e:report      # opens HTML report
+```
+Playwright config: `playwright.config.ts` (webServer spins up `yarn start`, baseURL http://localhost:3000). CI workflow at `.github/workflows/e2e.yml` runs these on pull requests.
 
 ## Production Build
 ```bash
