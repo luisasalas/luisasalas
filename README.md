@@ -20,6 +20,14 @@ yarn test
 ```
 Uses React Testing Library with a simple sanity check; extend with component/regression tests as needed.
 
+### End-to-End (Playwright)
+```bash
+yarn playwright:install   # one-time browser install
+yarn test:e2e             # runs Playwright specs (starts dev server automatically)
+yarn test:e2e:report      # opens HTML report
+```
+Playwright config: `playwright.config.ts` (webServer spins up `yarn start`, baseURL http://localhost:3000). CI workflow at `.github/workflows/e2e.yml` runs these on pull requests.
+
 ## Production Build
 ```bash
 yarn build
