@@ -21,8 +21,8 @@ export default defineConfig({
     env: {
       BROWSER: 'none',
       CI: 'true',
-      // React Scripts 3.x needs the legacy provider on newer Node (e.g., Node 20+).
-      ...(isCI ? {} : { NODE_OPTIONS: '--openssl-legacy-provider' }),
+      // React Scripts 3.x needs the legacy provider on Node 18+.
+      NODE_OPTIONS: '--openssl-legacy-provider',
     },
   },
 });
